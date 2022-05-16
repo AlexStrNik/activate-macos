@@ -2,9 +2,9 @@ const path = require("path");
 const { app, BrowserWindow } = require("electron");
 const robot = require("robotjs");
 
-const WIDTH = 340;
-const HEIGHT = 120;
-const UPDATE_INTERVAL = 700;
+const WIDTH = 374;
+const HEIGHT = 172;
+const UPDATE_INTERVAL = 1000;
 
 const getLuma = (c) => {
   var rgb = parseInt(c, 16);
