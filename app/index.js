@@ -24,8 +24,8 @@ app.whenReady().then(() => {
 
   win.setIgnoreMouseEvents(true);
   win.setPosition(
-    screen.getPrimaryDisplay().workAreaSize.width - 340,
-    screen.getPrimaryDisplay().workAreaSize.height
+    screen.getPrimaryDisplay().bounds.width - 340,
+    screen.getPrimaryDisplay().bounds.height - 120
   );
 
   win.loadFile(path.resolve(__dirname, "./index.html"));
