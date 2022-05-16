@@ -1,0 +1,29 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+@font-face {
+  font-family: "SegoeUI";
+  font-weight: 400;
+  src: url(./SegoeUI.ttf);
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: white;
+  opacity: 0.35;
+  font-family: "SegoeUI";
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 16px;
+}
