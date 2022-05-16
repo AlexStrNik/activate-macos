@@ -1,3 +1,4 @@
+const path = require("path");
 const { app, BrowserWindow } = require("electron");
 
 app.whenReady().then(() => {
@@ -27,5 +28,5 @@ app.whenReady().then(() => {
     screen.getPrimaryDisplay().workAreaSize.height
   );
 
-  win.loadFile("index.html");
+  win.loadFile(path.resolve(__dirname, "./index.html"));
 });
