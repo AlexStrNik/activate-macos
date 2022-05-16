@@ -5,15 +5,16 @@
   "main": "app/index.js",
   "scripts": {
     "start": "electron app",
-    "postinstall": "npx electron-rebuild",
-    "build": "npx electron-builder build --macos"
+    "postinstall": "electron-rebuild && electron-builder install-app-deps",
+    "build": "electron-builder build --macos"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^18.1.0",
+    "electron": "^18.2.3",
     "electron-builder": "^23.0.3",
-    "electron-rebuild": "^3.2.7"
+    "electron-rebuild": "^3.2.7",
+    "prebuild-install": "^7.1.0"
   },
   "build": {
     "appId": "ru.alexstrnik.activate-macos",
