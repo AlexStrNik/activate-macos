@@ -24,13 +24,6 @@
       "identity": null,
       "target": "dmg",
       "category": "public.app-category.utilities"
-    },
-    "dmg": {
-      "background": null,
-      "window": {
-        "width": "340",
-        "height": "120"
-      }
     }
   }
 }
