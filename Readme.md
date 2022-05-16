@@ -14,7 +14,7 @@ Inspired by https://github.com/MrGlockenspiel/activate-linux
 
 and then
 
-```
+```bash
 > npx electron-builder build --macos
 ```
 
