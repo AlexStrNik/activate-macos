@@ -1,7 +1,7 @@
 {
   "name": "activate-macos",
   "version": "1.0.0",
-  "description": "",
+  "description": "The \"Activate Windows\" watermark ported to MacOS with Electron",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -11,5 +11,10 @@
   "devDependencies": {
     "electron": "^18.1.0",
     "electron-builder": "^23.0.3"
+  },
+  "build": {
+    "mac": {
+      "identity": null
+    }
   }
 }
