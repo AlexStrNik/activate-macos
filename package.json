@@ -5,19 +5,22 @@
   "main": "app/index.js",
   "scripts": {
     "start": "electron app",
+    "postinstall": "npx electron-rebuild",
     "build": "npx electron-builder build --macos"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^18.1.0",
-    "electron-builder": "^23.0.3"
+    "electron-builder": "^23.0.3",
+    "electron-rebuild": "^3.2.7"
   },
   "build": {
     "appId": "ru.alexstrnik.activate-macos",
     "files": [
       "package.json",
-      "app/**/*"
+      "app/**/*",
+      "node_modules"
     ],
     "mac": {
       "identity": null,
@@ -28,5 +31,8 @@
     "dmg": {
       "sign": false
     }
+  },
+  "dependencies": {
+    "robotjs": "^0.6.0"
   }
 }
