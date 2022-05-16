@@ -4,7 +4,8 @@
   "description": "The \"Activate Windows\" watermark ported to MacOS with Electron",
   "main": "app/index.js",
   "scripts": {
-    "start": "electron app"
+    "start": "electron app",
+    "build": "npx electron-builder build --macos"
   },
   "author": "",
   "license": "ISC",
@@ -25,7 +26,11 @@
       "category": "public.app-category.utilities"
     },
     "dmg": {
-      "background": null
+      "background": null,
+      "window": {
+        "width": "340",
+        "height": "120"
+      }
     }
   }
 }
