@@ -2,9 +2,9 @@
   "name": "activate-macos",
   "version": "1.0.0",
   "description": "The \"Activate Windows\" watermark ported to MacOS with Electron",
-  "main": "main.js",
+  "main": "app/index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron app"
   },
   "author": "",
   "license": "ISC",
@@ -13,8 +13,19 @@
     "electron-builder": "^23.0.3"
   },
   "build": {
+    "appId": "ru.alexstrnik.activate-macos",
+    "files": [
+      "package.json",
+      "app/**/*",
+      "node_modules"
+    ],
     "mac": {
-      "identity": null
+      "identity": null,
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "background": null
     }
   }
 }
