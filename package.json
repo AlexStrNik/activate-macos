@@ -1,6 +1,6 @@
 {
   "name": "activate-macos",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The \"Activate Windows\" watermark ported to MacOS with Electron",
   "main": "app/index.js",
   "scripts": {
