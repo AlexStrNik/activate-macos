@@ -17,13 +17,16 @@
     "appId": "ru.alexstrnik.activate-macos",
     "files": [
       "package.json",
-      "app/**/*",
-      "node_modules"
+      "app/**/*"
     ],
     "mac": {
       "identity": null,
       "target": "dmg",
-      "category": "public.app-category.utilities"
+      "category": "public.app-category.utilities",
+      "hardenedRuntime": true
+    },
+    "dmg": {
+      "sign": false
     }
   }
 }
