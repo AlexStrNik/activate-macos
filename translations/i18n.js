@@ -8,11 +8,14 @@ module.exports = i18n;
 
 function i18n() {
     if(fs.existsSync(path.join(__dirname, app.getLocale() + '.json'))) {
-         loadedLanguage = JSON.parse(fs.readFileSync(path.join(__dirname, app.getLocale() + '.json'), 'utf8'))
+         loadedLanguage = loadLanguage(app.getLocale());
     }
     else {
-         loadedLanguage = JSON.parse(fs.readFileSync(path.join(__dirname, 'en.json'), 'utf8'))
+         loadedLanguage = loadLanguage("en");
     }
+}
+function loadLanguage(LOCALE_NAME){
+    return JSON.parse(fs.readFileSync(path.join(__dirname, `${LOCALE_NAME}.json`), 'utf8'))
 }
 
 i18n.prototype.__ = function(phrase) {
