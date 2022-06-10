@@ -1,6 +1,8 @@
 const path = require("path");
 const { app, BrowserWindow } = require("electron");
 const robot = require("robotjs");
+const i18n = new(require('../translations/i18n'));
+const ejs = require('ejs-electron');
 
 const WIDTH = 374;
 const HEIGHT = 172;
@@ -55,6 +57,6 @@ app.whenReady().then(() => {
 
     win.webContents.send("background-changed", { onDark });
   }, UPDATE_INTERVAL);
-
-  win.loadFile(path.resolve(__dirname, "./index.html"));
+  ejs.data("header", i18n.__('Activate')).data("text", i18n.__('Settings'));
+  win.loadFile(path.resolve(__dirname, `./index.ejs`));
 });

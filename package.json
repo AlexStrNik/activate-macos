@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^18.2.3",
+    "electron": "^18.3.3",
     "electron-builder": "^23.0.3",
     "electron-rebuild": "^3.2.7",
     "prebuild-install": "^7.1.0"
@@ -34,6 +34,7 @@
     }
   },
   "dependencies": {
+    "ejs-electron": "^2.1.1",
     "robotjs": "^0.6.0"
   }
 }
