@@ -1,7 +1,8 @@
 name: Build/release
 
 on:
-  workflow_dispatch:
+  release:
+    types: [created]
 
 jobs:
   release:
@@ -24,11 +25,9 @@ jobs:
       
       - run: npm run build
         env:
-          # GitHub token, automatically provided to the action
-          # (No need to define this secret in the repo settings)
           GITHUB_TOKEN: ${{ github.token }}
 
-      - uses: actions/upload-artifact@v2
-        with:
-          name: pizdec.dmg
-          path: dist/*.dmg
+#       - uses: actions/upload-artifact@v2
+#         with:
+#           name: pizdec.dmg
+#           path: dist/*.dmg
