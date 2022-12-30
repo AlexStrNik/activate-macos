@@ -26,8 +26,3 @@ jobs:
       - run: npm run build
         env:
           GITHUB_TOKEN: ${{ github.token }}
-
-#       - uses: actions/upload-artifact@v2
-#         with:
-#           name: pizdec.dmg
-#           path: dist/*.dmg
