@@ -23,8 +23,12 @@ jobs:
       - run: npm i
       
       - run: npm run build
+        env:
+          # GitHub token, automatically provided to the action
+          # (No need to define this secret in the repo settings)
+          GITHUB_TOKEN: ${{ github.token }}
 
       - uses: actions/upload-artifact@v2
         with:
-          name: mac.pkg
+          name: pizdec.dmg
           path: dist/*.dmg
